@@ -1,0 +1,17 @@
+{
+   "id":20,
+   "name":"blinkProject",
+   "agents":[
+      {
+         "archClass":"Argo",
+         "name":"agentARGO",
+         "sourceCode":"/* Initial beliefs and rules */\nserialPort(ttyEmulatedPort0).\t\t// If you are using the simulIDE \n//serialPort(ttyACM0).\t\t\t// If you are using a Arduino board in /dev/ttyACM0 \n//serialPort(ttyUSB0).\t\t\t// If you are using a Arduino board in /dev/ttyUSB0\n\n/* Initial goals */\n!connect.\n\n/* Plans */\n+!connect: serialPort(Port) <- \n\t.print(\"Trying connection with the low-end IoT device in \",Port);\n\t.port(Port);\n\t.limit(1000);\n\t.percepts(open).\n\n-!connect <- .print(\"Stopping MAS\"); .stopMAS.\n\n+ledStatus(Status): Status = on <-\n\t.print(\"I perceived that the LED is on. Turning OFF the LED on the low-end IoT device!\");\n\t.act(ledOff).\n\n+ledStatus(Status): Status = off <-\n\t.print(\"I perceived that the LED is off. Turning ON the LED on the low-end IoT device!\");\n\t.act(ledOn).\n\n+port(Port,Status): Status = timeout | Status = off <- \n\t.percepts(close);\n\t.print(\"The serial port \",Port,\" status is \",Status,\"! Stopping the MAS.\");\n\t.stopMAS.\n\n"
+      }
+   ],
+   "firmwares":[
+      {
+         "name":"blink",
+         "sourceCode":"#include <Javino.h>\t\t/* https://github.com/chon-group/javino2arduino/releases/latest */\n#define pinLED 13\nJavino javino;\n\nvoid setup() {\n pinMode(pinLED,OUTPUT);\n\n /* Javino Acts and Percept description */\n javino.act[\"ledOn\"]  = ledOn;\n javino.act[\"ledOff\"] = ledOff;\n javino.perceive(getExogenousPerceptions);\n javino.start(9600);\n\n}\n\nvoid loop() {\n  javino.run();\n}\n\n/* The serialEvent() function handles interruptions coming from the serial port. */\nvoid serialEvent(){\n  javino.readSerial();\n}\n\n/* It sends the exogenous environment's perceptions to the agent. */\nvoid getExogenousPerceptions(){ \n\tif(digitalRead(pinLED)==1){\n\t\tjavino.addPercept(\"ledStatus(on)\");\n\t}\n\telse javino.addPercept(\"ledStatus(off)\");\n}\n\n/* It implements the commands to be executed in the exogenous environment. */\nvoid ledOn(){\n  digitalWrite(pinLED,HIGH); \n}\n\nvoid ledOff(){\n  digitalWrite(pinLED,LOW); \n}\n"
+      }
+   ]
+}
