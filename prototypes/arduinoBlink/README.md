@@ -10,8 +10,8 @@
     In this project the agent turn an LED ON and OFF every reasoning circle.
 
     - [Blink Projet](files/reasoning/chonIDE/blinkProject.chon) for ChonIDE.
-    - [Blink Project](../../../../raw/main/prototypes/001-blink/files/reasoning/jacamoBlink.zip) for JaCaMo.
-    - [Blink Project](../../../../raw/main/prototypes/001-blink/files/reasoning/jasonEmbeddedBlink.zip) for JasonEmbedded.
+    - [Blink Project](../../../../raw/main/prototypes/arduinoBlink/files/reasoning/jacamoBlink.zip) for JaCaMo.
+    - [Blink Project](../../../../raw/main/prototypes/arduinoBlink/files/reasoning/jasonEmbeddedBlink.zip) for JasonEmbedded.
 
     ![](files/images/multiAgentSystem.png)
 
@@ -31,10 +31,10 @@
     ledOff                          //turn OFF the LED
     ```
 - Firmware layer
-    - [Project using Arduino](../../../../raw/main/prototypes/001-blink/files/firmware/arduinoBlink.zip)
+    - [Project using Arduino](../../../../raw/main/prototypes/arduinoBlink/files/firmware/arduinoBlink.zip)
 
 - Hardware Layer
-    - [Schematic Project](../../../../raw/main/prototypes/001-blink/files/hardware/blinkschematic.fzz) using Fritzing.
-    - [Simulation Project](../../../../raw/main/prototypes/001-blink/files/hardware/blinkSimulation.zip) using SimulIDE.
+    - [Schematic Project](../../../../raw/main/prototypes/arduinoBlink/files/hardware/blinkschematic.fzz) using Fritzing.
+    - [Simulation Project](../../../../raw/main/prototypes/arduinoBlink/files/hardware/blinkSimulation.zip) using SimulIDE.
 
 ---
