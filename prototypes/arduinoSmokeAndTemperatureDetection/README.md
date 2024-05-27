@@ -2,7 +2,7 @@
 |--------------| ----------------|---------------------|
 
 # Arduino Smoke and Temperature Project
-![](files/images/smokeAndTemperatureDetection.png)
+![](files/images/smokeAndTemperatureDetectionPrototype.png)
 
 ---
 - Reasoning layer
@@ -41,3 +41,5 @@
     - [Simulation Project](../../../../raw/main/prototypes/arduinoSmokeAndTemperatureDetection/files/hardware/smokeAndTemperatureDetectionSimulation.zip) using SimulIDE.
 
 ---
+### Demonstration
+[![](files/images/video.jpg)](https://youtu.be/KLT7rdBfMRU)

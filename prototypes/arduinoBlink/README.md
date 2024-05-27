@@ -38,3 +38,5 @@
     - [Simulation Project](../../../../raw/main/prototypes/arduinoBlink/files/hardware/blinkSimulation.zip) using SimulIDE.
 
 ---
+### Demonstration
+[![](files/images/video.jpg)](https://youtu.be/qxP6nFm8e7k)
