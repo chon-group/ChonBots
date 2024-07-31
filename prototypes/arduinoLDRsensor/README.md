@@ -1,13 +1,13 @@
 |[Home](../../)|[Prototypes](../)|[Tools](../../tools/)|
 |--------------| ----------------|---------------------|
 
-# Arduino Smoke and Temperature Project
-![](files/images/smokeAndTemperatureDetectionPrototype.png)
+# Arduino Light Sensor Project
+![](files/images/physicalArduinoLDRsensor.png)
 
 ---
 - Reasoning layer
 
-    In this project the agent turn an LED ON and OFF every reasoning circle.
+    In this project the agent perceive the light level every reasoning circle.
 
     - [LDRSensor Projet](files/reasoning/chonIDE/ldrSensor.chon) for ChonIDE.
     - [LDRSensor Project](../../../../raw/main/prototypes/arduinoLDRsensor/files/reasoning/jacamoLDRSensor.zip) for JaCaMo.
@@ -17,13 +17,13 @@
 
 - Interfacing layer
     
-    The low-end IoT device provide the follow perceptions and support the actions below: 
+    The low-end IoT device provide the follow perceptions below: 
 
     
     Percepts:
     ```	
     device(arduinoLightSensor)     // device name
-    lightSensor(L)                          // L is a Integer
+    lightSensor(L)                 // L is a Integer
     ```
 
 - Firmware layer
