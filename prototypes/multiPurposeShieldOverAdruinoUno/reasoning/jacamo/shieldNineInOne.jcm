@@ -1,0 +1,9 @@
+mas shieldNineInOne {
+
+  agent bob: sample_agent.asl{
+    ag-arch: jason.Argo
+  }
+
+  uses package: argo "com.github.chon-group:Argo:+"
+
+}

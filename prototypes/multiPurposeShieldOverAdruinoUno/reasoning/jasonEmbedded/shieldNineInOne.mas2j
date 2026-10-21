@@ -1,0 +1,7 @@
+MAS shieldNineInOne {
+	infrastructure: Centralised
+	agents:
+		bob agentArchClass jason.Argo;
+	aslSourcePath:
+		"asl";
+}

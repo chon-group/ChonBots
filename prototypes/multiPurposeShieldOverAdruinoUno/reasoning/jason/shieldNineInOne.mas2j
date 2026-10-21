@@ -1,0 +1,24 @@
+/*
+    shieldNineInOne
+    ---------------------------
+
+    ARGO Dependences added in build.gradle 
+
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        ...
+        implementation 'com.github.chon-group:Argo:+'
+    }
+
+*/
+
+MAS shieldNineInOne {
+
+    agents: bob agentArchClass jason.Argo;
+
+    aslSourcePath: "src/agt";
+}
