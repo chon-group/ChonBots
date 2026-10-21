@@ -1,0 +1,44 @@
+# ==========================================
+# CHON Prototype HUB - Git Ignore
+# ==========================================
+
+# Gradle caches and generated files
+.gradle/
+**/.gradle/
+build/
+**/build/
+.jcm-deps.gradle
+**/.jcm-deps.gradle
+
+# Java compiled files
+*.class
+*.log
+hs_err_pid*
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Operating system
+.DS_Store
+Thumbs.db
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Python (auxiliary scripts)
+__pycache__/
+*.pyc
+
+# Keep Gradle Wrapper files versioned!
+# gradlew
+# gradlew.bat
+# gradle/wrapper/gradle-wrapper.jar
+# gradle/wrapper/gradle-wrapper.properties

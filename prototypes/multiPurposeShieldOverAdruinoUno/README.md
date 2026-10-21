@@ -37,6 +37,9 @@ If the `helloWorld` goal cannot be executed because no applicable plan is availa
   - [JasonEmbedded](reasoning/jasonEmbedded/)
   - [ChonIDE](reasoning/chonIDE/multiPurposeShield.chon)
 
+
+![Prototype execution](assets/images/execution.png)
+
 ### L3 — Interfacing Layer
 
 The interfacing layer provides bidirectional serial communication between the BDI agent and the Arduino Uno R3 through the Javino protocol. Agents send commands to control the shield's actuators and receive perceptions representing sensor readings, button states, infrared commands, and actuator states.
